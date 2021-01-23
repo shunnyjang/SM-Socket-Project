@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:id="@+id/idTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""/>
+    <ScrollView
+        android:background="@color/purple"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/chatRoomList"
+        android:fillViewport="true"
+        android:layout_below="@+id/idTxt">
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/chatRoomListView"
+            android:transcriptMode="alwaysScroll">
+        </ListView>
+    </ScrollView>
+
+    <ScrollView
+        android:background="@color/pink"
+        android:layout_width="match_parent"
+        android:layout_height="370dp"
+        android:id="@+id/scroll"
+        android:fillViewport="true"
+        android:layout_below="@+id/chatRoomList">
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/listView"
+            android:transcriptMode="alwaysScroll">
+        </ListView>
+    </ScrollView>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/roomListView"
+            android:transcriptMode="alwaysScroll"/>
+    </ScrollView>
+
+    <EditText
+        android:id="@+id/chatText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/scroll"/>
+    <Button
+        android:id="@+id/sendBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/chatText"
+        android:text="전송"/>
+    <Button
+        android:id="@+id/whisperBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sendBtn"
+        android:text="귓속말"/>
+    <Button
+        android:id="@+id/logoutBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/whisperBtn"
+        android:text="로그아웃"/>
+</RelativeLayout>

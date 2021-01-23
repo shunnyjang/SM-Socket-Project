@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ChatRoomActivity"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <Button
+        android:id="@+id/exitButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Exit"/>
+    <TextView
+        android:id="@+id/roomId"
+        android:textColor="@color/purple"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/exitButton"/>
+
+    <ScrollView
+        android:id="@+id/roomUserScroll"
+        android:background="@color/pink"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:fillViewport="true"
+        android:layout_below="@+id/roomId">
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/roomUserListView"
+            android:transcriptMode="alwaysScroll">
+        </ListView>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/roomChatScrollView"
+        android:background="@color/purple"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:fillViewport="true"
+        android:layout_below="@+id/roomUserScroll">
+        <ListView
+            android:id="@+id/roomChatting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:transcriptMode="alwaysScroll">
+        </ListView>
+    </ScrollView>
+
+    <EditText
+        android:id="@+id/roomChattingEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/roomChatScrollView"/>
+    <Button
+        android:id="@+id/roomChattingSend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/roomChattingEditText"
+        android:text="전송"/>
+
+    <TextView
+        android:id="@+id/chatTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/roomChattingSend"
+        />
+</RelativeLayout>
